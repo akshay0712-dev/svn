@@ -70,7 +70,7 @@ export default function Home({ language, setLanguage }) {
           duration: 2,
           repeat: false,
         }}
-        className="text-center  bg-[url(solar.avif)] bg-no-repeat bg-cover w-[100vw] h-screen bg-center grid grid-cols-1 lg:grid-cols-2 overflow-hidden"
+        className="text-center  bg-[url(./assets/solar.avif)] bg-no-repeat bg-cover w-[100vw] h-screen bg-center grid grid-cols-1 lg:grid-cols-2 overflow-hidden"
       >
         <div className="hidden lg:block"></div>
         <motion.div
