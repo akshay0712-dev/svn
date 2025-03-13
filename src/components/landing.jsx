@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Home from "./Home";
 import Contact from "./contact";
 import GovSceam from "./govSceam";
-import FAQ from "./FAQ.JSX";
+import FAQ from "./FAQ.jsx";
 import Footer from "./footer";
 import Services from "./services";
 
