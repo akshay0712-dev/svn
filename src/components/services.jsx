@@ -27,19 +27,16 @@ export default function Services({ language }) {
       };
   return (
     <section className="relative p-6 bg-[black] w-[100vw] overflow-hidden">
-    {/* <span className="absolute  left-52 text-[#ffffff80] text-[30rem] font-semibold z-[0] hidden lg:block">
-      ?
-    </span> */}
     <div className="flex flex-col lg:flex-row items-center w-[95vw] md:w-[80vw] mx-auto bg-black p-6 rounded-lg shadow-md ">
       <div className=" justify-between items-center mb-4 z-[5]">
         <motion.h2
           variants={fadeIn("right", 300, 0)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: true, amount: 0.7 }}
+          viewport={{ once: true }}
           className="w-[80vw] lg:w-[40vw]"
         >
-          <img src="services.jpg" alt="" srcset="" className="" />
+          <img src="services.jpg" alt="" srcSet="" className="" />
         </motion.h2>
       </div>
 
