@@ -53,7 +53,7 @@ export default function Home({ language, setLanguage }) {
           className="px-3 py-1 bg-[#1E90FF] text-white rounded hover:bg-[#00BFFF] transition"
           onClick={() => setLanguage(language === "hi" ? "en" : "hi")}
         >
-          {language === "hi" ? "🇬🇧 English" : "🇮🇳 हिंदी"}
+          {language === "hi" ? "English" : "हिंदी"}
         </motion.button>
       </header>
 
