@@ -1,4 +1,6 @@
 import { useState } from "react";
+  import { delay, motion } from "framer-motion"; // Importing Framer Motion for animations
+  import { fadeIn } from "./varients";
 
 export default function Contact({ language }) {
   const content = {
@@ -28,7 +30,12 @@ export default function Contact({ language }) {
     <section id="contact" className="p-10 bg-black text-white">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 bg-black text-white">
         {/* Left Section - Text Content */}
-        <div className="flex justify-between flex-col">
+        <motion.div
+        variants={fadeIn("down", 300, 0)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: true}}
+         className="flex justify-between flex-col">
           <h2 className="text-3xl font-bold bg-black text-white">
             {content[language].heading}
           </h2>
@@ -64,10 +71,15 @@ export default function Contact({ language }) {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Section - Google Map & WhatsApp */}
-        <div className="flex gap-7 flex-col space-y-4">
+        <motion.div
+        variants={fadeIn("up", 300, 0)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: true}}
+         className="flex gap-7 flex-col space-y-4">
           {/* Embedded Google Map */}
           <div className="w-full h-56">
             <iframe
@@ -87,7 +99,7 @@ export default function Contact({ language }) {
           >
             {content[language].whatsapp}: +91-9199922822
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

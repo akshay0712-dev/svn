@@ -102,19 +102,39 @@ export default function GovSceam({ language }) {
 
   return (
     <>
-     <header id="about" className="flex justify-center items-center p-4 bg-[#0A0A0A] shadow-md w-[100vw] overflow-x-hidden">
+     <motion.header     
+     variants={fadeIn("left", 0, 0)}
+     initial={
+      {
+        opacity: 0,
+      }}
+     whileInView={
+      {
+        opacity: 1,
+      }
+     }
+     transition={{
+        ease: "easeInOut",
+        duration: 1,
+        repeat: false,
+      }}
+     viewport={{ once: true}}
+      id="about" className="flex justify-center items-center p-4 bg-[#0A0A0A] shadow-md w-[100vw] overflow-x-hidden">
         <h1 className="font-bold text-3xl text-white text-center">{content[language].title}</h1>
        
-      </header>
-    <section className="">
-
-    </section>
+      </motion.header>
 
     {/* Schemes Section */}
-    <section className="p-6 flex flex-col lg:flex-row flex-wrap bg-black  gap-6 justify-center items-center w-[100vw] overflow-x-hidden">
+    <motion.section
+    
+    variants={fadeIn("right", 300, 0)}
+    initial="hidden"
+    whileInView={"show"}
+    viewport={{ once: true}}
+     className="p-6 flex flex-col lg:flex-row flex-wrap bg-black  gap-6 justify-center items-center w-[100vw] overflow-x-hidden">
         {content[language].schemes.map((scheme, index) => (
           <div
-            key={index}
+            key={index} 
             className="bg-gradient-to-b from-[#2D3B5E] to-[#334E96] hover:scale-105 hover:border-b-8  border-[#FFD700]  transition p-6 shadow-lg rounded-lg min-h-[55vh] w-[90vw] md:w-[40vw] lg:w-[30vw] flex flex-col justify-evenly items-center text-center"
           >
             <img src={scheme.img} alt={scheme.title} className="h-10vh md:h-[15vh] w-[20vw] md:w-[10vw]  mx-auto " />
@@ -128,7 +148,7 @@ export default function GovSceam({ language }) {
             </ul>
           </div>
         ))}
-      </section>
+      </motion.section>
     </>
   );
 }

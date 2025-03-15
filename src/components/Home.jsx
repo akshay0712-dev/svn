@@ -40,7 +40,7 @@ export default function Home({ language, setLanguage }) {
           variants={fadeIn("left", 40, 0)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
+          viewport={{ once: true, amount: 0.7 }}
           className="text-xl font-bold text-white"
         >
           SVN Infra & Solar Services
@@ -49,7 +49,7 @@ export default function Home({ language, setLanguage }) {
           variants={fadeIn("right", 40, 0)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
+          viewport={{ once: true, amount: 0.7 }}
           className="px-3 py-1 bg-[#1E90FF] text-white rounded hover:bg-[#00BFFF] transition"
           onClick={() => setLanguage(language === "hi" ? "en" : "hi")}
         >
@@ -77,7 +77,7 @@ export default function Home({ language, setLanguage }) {
           variants={fadeIn("left", 60, 0.25)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
+          viewport={{ once: true, amount: 0.7 }}
           className="flex justify-center items-center flex-col gap-4"
         >
           <h2 className="text-3xl md:text-4xl lg:text-6xl leading-[60px] font-extrabold text-white font- ">

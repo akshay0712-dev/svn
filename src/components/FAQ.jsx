@@ -95,6 +95,7 @@ export default function FAQ({ language }) {
             variants={fadeIn("right", 300, 0)}
             initial="hidden"
             whileInView={"show"}
+            viewport={{ once: true}}
             className="text-4xl font-bold text-[white] text-center"
           >
             {content[language].title}
@@ -106,7 +107,7 @@ export default function FAQ({ language }) {
           variants={fadeIn("left", 300, 0)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false}}
+          viewport={{ once: true}}
           className="space-y-4 z-[5]"
         >
           {content[language].faqs.map((faq, index) => (

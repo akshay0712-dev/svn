@@ -36,6 +36,7 @@ export default function Services({ language }) {
           variants={fadeIn("right", 300, 0)}
           initial="hidden"
           whileInView={"show"}
+          viewport={{ once: true, amount: 0.7 }}
           className="w-[80vw] lg:w-[40vw]"
         >
           <img src="services.jpg" alt="" srcset="" className="" />
@@ -47,7 +48,7 @@ export default function Services({ language }) {
         variants={fadeIn("left", 300, 0)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: false}}
+        viewport={{ once: true}}
         className="space-y-4 z-[5]"
       >
         {content[language].list.map((services, index) => (
